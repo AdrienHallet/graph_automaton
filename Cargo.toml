@@ -1,0 +1,11 @@
+[package]
+name = "graph_automaton"
+version = "0.1.0"
+edition = "2021"
+authors = [ "Adrien Hallet" ]
+description = "An automaton-oriented graph library"
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
