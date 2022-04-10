@@ -1,12 +1,12 @@
 /// Represents an Adjascency Matrix for the [Graph]
-#[derive(Debug)]
-pub struct Matrix<'m> {
-    matrix: Vec<Vec<Option<&'m str>>>
+#[derive(Debug, Default)]
+pub struct Matrix {
+    matrix: Vec<Vec<Option<String>>>
 }
 
-impl<'m> Matrix<'m> {
+impl Matrix {
 
-    pub fn new() -> Matrix<'m> {
+    pub fn new() -> Matrix {
         Self {
             matrix: vec![],
         }
@@ -17,7 +17,7 @@ impl<'m> Matrix<'m> {
         self.matrix.push(vec![None; self.matrix.len() + 1]);
     }
 
-    pub fn set_option(&mut self, x: usize, y: usize, option: Option<&'m str>) {
+    pub fn set_option(&mut self, x: usize, y: usize, option: Option<String>) {
         self.matrix[x][y] = option;
     }
 }
